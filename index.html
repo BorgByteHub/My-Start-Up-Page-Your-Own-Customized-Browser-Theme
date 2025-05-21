@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Startup Page</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="/images/favicon.jpg" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/gistesy" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <div class="left-section">
+    <div class="greeting-section">
+      <h1 id="greeting"></h1>
+      <div class="date" id="current-date">Monday, March 6</div>
+    </div>
+
+    <div class="search-section">
+      <div class="search-container">
+        <div class="search-engine-select">
+          <button id="search-engine-btn" class="search-engine-btn">
+            <img id="search-engine-icon" src="https://www.google.com/favicon.ico" alt="Search Engine" width="24" height="24">
+            <span class="arrow-down">▼</span>
+          </button>
+          <div class="search-engine-dropdown">
+            <div class="search-engine-option" data-engine="google" data-icon="https://www.google.com/favicon.ico" data-url="https://www.google.com/search?q=">
+              <img src="https://www.google.com/favicon.ico" alt="Google" width="24" height="24">
+              <span>Google</span>
+            </div>
+            <div class="search-engine-option" data-engine="bing" data-icon="https://www.bing.com/favicon.ico" data-url="https://www.bing.com/search?q=">
+              <img src="https://www.bing.com/favicon.ico" alt="Bing" width="24" height="24">
+              <span>Bing</span>
+            </div>
+            <div class="search-engine-option" data-engine="duckduckgo" data-icon="https://duckduckgo.com/favicon.ico" data-url="https://duckduckgo.com/?q=">
+              <img src="https://duckduckgo.com/favicon.ico" alt="DuckDuckGo" width="24" height="24">
+              <span>DuckDuckGo</span>
+            </div>
+            <div class="search-engine-option" data-engine="chatgpt" data-icon="https://chat.openai.com/favicon.ico" data-url="https://chat.openai.com/?q=">
+              <img src="https://chat.openai.com/favicon.ico" alt="ChatGPT" width="24" height="24">
+              <span>ChatGPT</span>
+            </div>
+            <div class="search-engine-option" data-engine="yandex" data-icon="https://yandex.com/favicon.ico" data-url="https://yandex.com/search/?text=">
+              <img src="https://yandex.com/favicon.ico" alt="Yandex" width="24" height="24">
+              <span>Yandex</span>
+            </div>            
+
+          </div>
+        </div>
+        <input type="text" id="search-input" placeholder="Type anything to search...">
+        <button id="search-button">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="quick-links">
+      <h3>Quick Links</h3>
+      <div class="links-grid">
+        <a href="https://youtube.com" class="quick-link" title="Go to YouTube">
+          <img src="https://www.youtube.com/favicon.ico" alt="YouTube">
+          <span class="link-tooltip">YouTube</span>
+        </a>
+        <a href="https://gmail.com" class="quick-link" title="Go to Gmail">
+          <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt="Gmail">
+          <span class="link-tooltip">Gmail</span>
+        </a>
+        <a href="https://medium.com" class="quick-link" title="Go to Medium">
+          <img src="https://iili.io/3qfku2I.png" alt="Medium">
+          <span class="link-tooltip">Medium</span>
+        </a>
+        <a href="https://github.com" class="quick-link" title="Go to GitHub">
+          <img src="https://iili.io/3qfvUP4.png" alt="GitHub">
+          <span class="link-tooltip">GitHub</span>
+        </a>
+        <a href="https://notion.so" class="quick-link" title="Go to Notion">
+          <img src="https://www.notion.so/images/favicon.ico" alt="Notion">
+          <span class="link-tooltip">Notion</span>
+        </a>
+        <a href="https://calendar.google.com" class="quick-link" title="Go to Calendar">
+          <img src="https://calendar.google.com/googlecalendar/images/favicon_v2018_256.png" alt="Calendar">
+          <span class="link-tooltip">Calendar</span>
+        </a>
+        <a href="https://www.instagram.com/" class="quick-link" title="Go to Instagram">
+          <img src="https://static.cdninstagram.com/rsrc.php/v4/ys/r/aM-g435MtEX.png" alt="Borgdevweb">
+          <span class="link-tooltip">BorgDev Web</span>
+        </a>
+        <a href="https://borgdevweb.web.app" class="quick-link" title="Go to BorgDev Web">
+          <img src="/images/favicon.jpg" alt="Borgdevweb">
+          <span class="link-tooltip">BorgDev Web</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="quote-section">
+      <blockquote id="daily-quote">
+        <p class="quote-text">Loading quote...</p>
+        <footer class="quote-author">- Author</footer>
+      </blockquote>
+
+    </div>
+   
+    <div class="goal-section">
+      <div class="goal-header">
+          <h3>Today's Goal :</h3>
+      </div>
+      <div class="goal-content">
+          <input type="text" class="goal-input" placeholder="Write your goal here...">
+      </div>
+    </div>
+
+    <div class="finance-section">
+      <div class="balance-card">
+        <div class="balance-header">
+          <h3>Current Bank Balance</h3>
+          <button id="edit-balance" class="edit-btn">Edit</button>
+        </div>
+        <div class="balance-amount" contenteditable="true" id="balance-amount">₹0.00</div>
+        <div class="last-updated" id="last-updated">Last updated: Never</div>
+      </div>
+    </div>
+    <div class="weather-container bg-gradient-to-br from-[#2b2b2b] to-[#373737] p-5 rounded-2xl shadow-lg border border-[#333] flex items-center justify-between transition-all hover:scale-105 hover:bg-gradient-to-br hover:from-[#1f1f1f] hover:to-[#2a2a2a]">
+      <div>
+        <!-- Weather Section Title -->
+        <h3 class="text-white text-sm mb-2 opacity-70">Weather</h3>
+        
+        <!-- Temperature -->
+        <h2 class="text-white text-4xl font-bold temperature mb-1">--°C</h2>
+        
+        <!-- Weather Condition -->
+        <p class="text-gray-400 text-sm condition mb-2">Fetching...</p>
+        
+        <!-- Location -->
+        <p class="text-gray-500 text-xs location">Fetching your location...</p>
+        
+      <!-- Refresh Button -->
+    </div>
+    
+  </div>
+  </div>
+
+  <div class="right-section">
+    <!-- Clock section -->
+    <div class="clock-container">
+      <div class="clock-title">
+        <span class="title-text">ExpectedLastTime</span>
+      </div>
+      <div class="clock-overlay">
+        <img src="https://iili.io/3qfPju2.png" alt="Clock Overlay">
+      </div>
+      <div class="clock" data-date="2024-12-25">
+        <div>
+          <div data-clock="years" data-numbers="101" class="clock-face"></div>
+        </div>
+        <div>
+          <div data-clock="seconds" data-numbers="60" class="clock-face"></div>
+        </div>
+        <div>
+          <div data-clock="minutes" data-numbers="60" class="clock-face"></div>
+        </div>
+        <div>
+          <div data-clock="hours" data-numbers="24" class="clock-face"></div>
+        </div>
+        <div>
+          <div data-clock="days" data-numbers="31" class="clock-face"></div>
+        </div>
+        <div>
+          <div data-clock="months" data-numbers="12" class="clock-face"></div>
+        </div>
+        <div>
+          <div data-clock="day-names" data-numbers="7" class="clock-face"></div>
+        </div>
+        <button type="button" id="current-lang" class="current-lang-display">en</button>
+      </div>
+      <div id="countdown-timer" class="countdown-timer"></div>
+    </div>
+  </div>
+</div>
+
+<dialog id="language-dialog">
+  <button type="button" id="btn-dialog-close" class="btn-dialog-close" autofocus>&#10005;</button>
+  <div id="language-options" class="language-options"></div>
+</dialog>
+
+<dialog id="death-year-dialog">
+  <button type="button" id="btn-death-dialog-close" class="btn-dialog-close" autofocus>&#10005;</button>
+  <div class="death-year-input-container">
+    <h2>Enter Your Expected Death Year</h2>
+    <input type="number" id="death-year" min="2024" max="2100" placeholder="Enter year (2024-2100)">
+    <button type="button" id="submit-death-year">Submit</button>
+  </div>
+</dialog>
+
+
+
+
+<script src="./script.js"></script>
+<script>
+  const API_KEY = 'c0a19645f7d7c1a652b3419569de2f70';
+
+  // Function to fetch weather data for a given city
+  async function fetchWeather(lat, lon) {
+    try {
+      const res = await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
+      );
+      const data = await res.json();
+
+      if (data.main) {
+        document.querySelector('.temperature').textContent = `${Math.round(data.main.temp)}°C`;
+        document.querySelector('.condition').textContent = data.weather[0].description;
+        document.querySelector('.location').textContent = `${data.name}, ${data.sys.country}`;
+      } else {
+        document.querySelector('.temperature').textContent = '--°C';
+        document.querySelector('.condition').textContent = 'Unavailable';
+        document.querySelector('.location').textContent = 'Unknown location';
+      }
+    } catch (error) {
+      console.error('Weather fetch failed:', error);
+      document.querySelector('.temperature').textContent = '--°C';
+      document.querySelector('.condition').textContent = 'Error fetching data';
+      document.querySelector('.location').textContent = '';
+    }
+  }
+
+  // Get the user's current location using the Geolocation API
+  function getUserLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        fetchWeather(lat, lon);
+      }, () => {
+        alert("Unable to retrieve your location.");
+      });
+    } else {
+      alert("Geolocation is not supported by this browser.");
+    }
+  }
+
+  // Trigger weather data fetch when the page loads
+  window.onload = getUserLocation;
+
+  // Refresh button functionality (to re-fetch weather based on current location)
+  document.querySelector('.refresh-btn').addEventListener('click', () => {
+    getUserLocation();
+  });
+</script>
+
+
+</body>
+</html>
